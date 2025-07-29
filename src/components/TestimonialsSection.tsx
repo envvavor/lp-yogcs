@@ -1,7 +1,9 @@
 import { Card } from "@/components/ui/card";
 import { Star, Quote } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 export const TestimonialsSection = () => {
+  const { ref: sectionRef, isVisible: sectionVisible } = useScrollAnimation();
   const testimonials = [
     {
       name: "Novi Bayu",
@@ -40,9 +42,9 @@ export const TestimonialsSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-background to-primary/5">
+    <section ref={sectionRef} className="py-20 bg-gradient-to-b from-background to-primary/5">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className={`text-center mb-16 transition-all duration-700 ${sectionVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'}`}>
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
             Apa Kata <span className="text-primary">Peserta Workshop?</span>
           </h2>
@@ -73,7 +75,7 @@ export const TestimonialsSection = () => {
         {/* Testimonials */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="p-6 hover:shadow-medium transition-all duration-300 hover:-translate-y-1 relative">
+            <Card key={index} className={`p-6 hover:shadow-medium transition-all duration-300 hover:-translate-y-1 relative ${sectionVisible ? 'animate-scale-in' : 'opacity-0 scale-90'}`} style={{ animationDelay: `${index * 200}ms` }}>
               <Quote className="absolute top-4 right-4 w-8 h-8 text-primary/20" />
               
               {testimonial.highlight && (

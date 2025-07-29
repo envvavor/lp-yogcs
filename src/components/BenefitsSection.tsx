@@ -1,7 +1,9 @@
 import { Card } from "@/components/ui/card";
 import { TrendingUp, Target, Users, BookOpen, MessageSquare, ChartBar } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 export const BenefitsSection = () => {
+  const { ref: sectionRef, isVisible: sectionVisible } = useScrollAnimation();
   const benefits = [
     {
       icon: Target,
@@ -36,9 +38,9 @@ export const BenefitsSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-background to-secondary/30">
+    <section ref={sectionRef} className="py-20 bg-gradient-to-b from-background to-secondary/30">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className={`text-center mb-16 transition-all duration-700 ${sectionVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'}`}>
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
             Apa Saja Yang Akan Anda <span className="text-primary">Pelajari?</span>
           </h2>
@@ -50,7 +52,7 @@ export const BenefitsSection = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {benefits.map((benefit, index) => (
-            <Card key={index} className="p-6 hover:shadow-medium transition-all duration-300 hover:-translate-y-1 border-l-4 border-l-primary">
+            <Card key={index} className={`p-6 hover:shadow-medium transition-all duration-300 hover:-translate-y-1 border-l-4 border-l-primary ${sectionVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'}`} style={{ animationDelay: `${index * 150}ms` }}>
               <div className="flex items-start gap-4">
                 <div className="bg-gradient-primary p-3 rounded-lg">
                   <benefit.icon className="w-6 h-6 text-primary-foreground" />

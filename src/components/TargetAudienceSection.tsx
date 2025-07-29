@@ -1,7 +1,9 @@
 import { Card } from "@/components/ui/card";
 import { Users, TrendingUp, MessageCircle, Target, Briefcase, HeartHandshake } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 export const TargetAudienceSection = () => {
+  const { ref: sectionRef, isVisible: sectionVisible } = useScrollAnimation();
   const audiences = [
     {
       icon: Briefcase,
@@ -36,9 +38,9 @@ export const TargetAudienceSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-secondary/30 to-background">
+    <section ref={sectionRef} className="py-20 bg-gradient-to-b from-secondary/30 to-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className={`text-center mb-16 transition-all duration-700 ${sectionVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'}`}>
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
             <span className="text-primary">Cocok Untuk</span> Siapa Kelas Ini?
           </h2>
@@ -50,7 +52,7 @@ export const TargetAudienceSection = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
           {audiences.map((audience, index) => (
-            <Card key={index} className="p-6 h-full hover:shadow-medium transition-all duration-300 hover:-translate-y-1 group">
+            <Card key={index} className={`p-6 h-full hover:shadow-medium transition-all duration-300 hover:-translate-y-1 group ${sectionVisible ? 'animate-fade-in-left' : 'opacity-0 -translate-x-8'}`} style={{ animationDelay: `${index * 200}ms` }}>
               <div className="flex flex-col h-full">
                 <div className="bg-gradient-primary p-3 rounded-lg w-fit mb-4 group-hover:scale-110 transition-transform duration-300">
                   <audience.icon className="w-6 h-6 text-primary-foreground" />

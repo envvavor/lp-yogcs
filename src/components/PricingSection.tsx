@@ -1,12 +1,14 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Check, Clock, Users, Video, MapPin } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 export const PricingSection = () => {
+  const { ref: sectionRef, isVisible: sectionVisible } = useScrollAnimation();
   return (
-    <section className="py-20 bg-gradient-to-b from-primary/5 to-accent/5">
+    <section ref={sectionRef} className="py-20 bg-gradient-to-b from-primary/5 to-accent/5">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className={`text-center mb-16 transition-all duration-700 ${sectionVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'}`}>
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
             Berapa <span className="text-primary">Investasi</span> Workshop Ini?
           </h2>
@@ -17,7 +19,7 @@ export const PricingSection = () => {
 
         <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {/* Offline Workshop */}
-          <Card className="p-8 relative overflow-hidden border-2 border-primary/20 hover:shadow-large transition-all duration-300">
+          <Card className={`p-8 relative overflow-hidden border-2 border-primary/20 hover:shadow-large transition-all duration-300 ${sectionVisible ? 'animate-fade-in-left' : 'opacity-0 -translate-x-8'}`}>
             <div className="absolute top-0 right-0 bg-gradient-accent text-accent-foreground px-4 py-2 rounded-bl-lg font-bold text-sm">
               REKOMENDASI
             </div>
@@ -88,7 +90,7 @@ export const PricingSection = () => {
           </Card>
 
           {/* Online Workshop */}
-          <Card className="p-8 relative overflow-hidden hover:shadow-medium transition-all duration-300">
+          <Card className={`p-8 relative overflow-hidden hover:shadow-medium transition-all duration-300 ${sectionVisible ? 'animate-fade-in-right' : 'opacity-0 translate-x-8'}`} style={{ animationDelay: '200ms' }}>
             <div className="text-center mb-6">
               <div className="bg-gradient-primary p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                 <Video className="w-8 h-8 text-primary-foreground" />
