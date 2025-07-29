@@ -42,90 +42,90 @@ export const TestimonialsSection = () => {
   ];
 
   return (
-    <section ref={sectionRef} className="py-20 bg-gradient-to-b from-background to-primary/5">
+    <section ref={sectionRef} className="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-background to-primary/5">
       <div className="container mx-auto px-4">
-        <div className={`text-center mb-16 transition-all duration-700 ${sectionVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'}`}>
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+        <div className={`text-center mb-12 sm:mb-16 transition-all duration-700 ${sectionVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'}`}>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
             Apa Kata <span className="text-primary">Peserta Workshop?</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
             Testimoni nyata dari peserta yang telah merasakan manfaat workshop Jagoan CS
           </p>
         </div>
 
         {/* Results Statistics */}
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16">
           {results.map((result, index) => (
-            <Card key={index} className={`p-8 text-center bg-gradient-to-br ${
+            <Card key={index} className={`p-6 sm:p-8 text-center bg-gradient-to-br ${
               result.color === 'success' 
                 ? 'from-success/10 to-success/20 border-success/30' 
                 : 'from-primary/10 to-primary/20 border-primary/30'
             } hover:shadow-large transition-all duration-300`}>
-              <div className={`text-6xl font-bold mb-4 ${
+              <div className={`text-4xl sm:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 ${
                 result.color === 'success' ? 'text-success' : 'text-primary'
               }`}>
                 {result.metric}
               </div>
-              <h3 className="text-xl font-semibold mb-2">{result.label}</h3>
-              <p className="text-muted-foreground">{result.description}</p>
+              <h3 className="text-lg sm:text-xl font-semibold mb-2">{result.label}</h3>
+              <p className="text-muted-foreground text-sm sm:text-base">{result.description}</p>
             </Card>
           ))}
         </div>
 
         {/* Testimonials */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className={`p-6 hover:shadow-medium transition-all duration-300 hover:-translate-y-1 relative ${sectionVisible ? 'animate-scale-in' : 'opacity-0 scale-90'}`} style={{ animationDelay: `${index * 200}ms` }}>
-              <Quote className="absolute top-4 right-4 w-8 h-8 text-primary/20" />
+            <Card key={index} className={`p-4 sm:p-6 hover:shadow-medium transition-all duration-300 hover:-translate-y-1 relative ${sectionVisible ? 'animate-scale-in' : 'opacity-0 scale-90'}`} style={{ animationDelay: `${index * 200}ms` }}>
+              <Quote className="absolute top-3 right-3 sm:top-4 sm:right-4 w-6 h-6 sm:w-8 sm:h-8 text-primary/20" />
               
               {testimonial.highlight && (
-                <div className="bg-accent text-accent-foreground px-3 py-1 rounded-full text-sm font-bold mb-4 inline-block">
+                <div className="bg-accent text-accent-foreground px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-bold mb-3 sm:mb-4 inline-block">
                   {testimonial.highlight}
                 </div>
               )}
 
-              <div className="flex mb-4">
+              <div className="flex mb-3 sm:mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-accent text-accent" />
+                  <Star key={i} className="w-4 h-4 sm:w-5 sm:h-5 fill-accent text-accent" />
                 ))}
               </div>
 
-              <p className="text-muted-foreground mb-6 italic leading-relaxed">
+              <p className="text-muted-foreground mb-4 sm:mb-6 italic leading-relaxed text-sm sm:text-base">
                 "{testimonial.content}"
               </p>
 
-              <div className="border-t pt-4">
-                <h4 className="font-semibold text-primary">{testimonial.name}</h4>
-                <p className="text-sm text-muted-foreground">{testimonial.company}</p>
+              <div className="border-t pt-3 sm:pt-4">
+                <h4 className="font-semibold text-primary text-sm sm:text-base">{testimonial.name}</h4>
+                <p className="text-xs sm:text-sm text-muted-foreground">{testimonial.company}</p>
               </div>
             </Card>
           ))}
         </div>
 
         {/* Brand Logos Section */}
-        <Card className="bg-gradient-to-r from-secondary/50 to-accent/5 p-8">
-          <h3 className="text-2xl font-bold text-center mb-8">
+        <Card className="bg-gradient-to-r from-secondary/50 to-accent/5 p-6 sm:p-8">
+          <h3 className="text-xl sm:text-2xl font-bold text-center mb-6 sm:mb-8">
             BRAND Yang Pernah Kirim Tim Untuk Ikut Kelas
           </h3>
           
           <div className="text-center">
-            <p className="text-muted-foreground mb-6">
+            <p className="text-muted-foreground mb-4 sm:mb-6 text-sm sm:text-base">
               Berbagai perusahaan dan brand ternama telah mempercayakan pelatihan CS mereka kepada kami
             </p>
             
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 items-center">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 items-center">
               {/* Placeholder for brand logos */}
-              <div className="bg-white/50 rounded-lg p-4 h-20 flex items-center justify-center">
-                <span className="text-sm font-medium text-muted-foreground">Brand Logo</span>
+              <div className="bg-white/50 rounded-lg p-3 sm:p-4 h-16 sm:h-20 flex items-center justify-center">
+                <span className="text-xs sm:text-sm font-medium text-muted-foreground">Brand Logo</span>
               </div>
-              <div className="bg-white/50 rounded-lg p-4 h-20 flex items-center justify-center">
-                <span className="text-sm font-medium text-muted-foreground">Brand Logo</span>
+              <div className="bg-white/50 rounded-lg p-3 sm:p-4 h-16 sm:h-20 flex items-center justify-center">
+                <span className="text-xs sm:text-sm font-medium text-muted-foreground">Brand Logo</span>
               </div>
-              <div className="bg-white/50 rounded-lg p-4 h-20 flex items-center justify-center">
-                <span className="text-sm font-medium text-muted-foreground">Brand Logo</span>
+              <div className="bg-white/50 rounded-lg p-3 sm:p-4 h-16 sm:h-20 flex items-center justify-center">
+                <span className="text-xs sm:text-sm font-medium text-muted-foreground">Brand Logo</span>
               </div>
-              <div className="bg-white/50 rounded-lg p-4 h-20 flex items-center justify-center">
-                <span className="text-sm font-medium text-muted-foreground">Brand Logo</span>
+              <div className="bg-white/50 rounded-lg p-3 sm:p-4 h-16 sm:h-20 flex items-center justify-center">
+                <span className="text-xs sm:text-sm font-medium text-muted-foreground">Brand Logo</span>
               </div>
             </div>
           </div>
