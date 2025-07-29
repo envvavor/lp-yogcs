@@ -1,0 +1,118 @@
+import { Card } from "@/components/ui/card";
+import { Users, TrendingUp, MessageCircle, Target, Briefcase, HeartHandshake } from "lucide-react";
+
+export const TargetAudienceSection = () => {
+  const audiences = [
+    {
+      icon: Briefcase,
+      title: "Pembisnis",
+      description: "Yang ingin memperbaiki Closing Rate tim CS untuk meningkatkan konversi lead WA menjadi penjualan"
+    },
+    {
+      icon: TrendingUp,
+      title: "Brand/Perusahaan",
+      description: "Yang tidak ingin menaikkan budget iklan, tapi tetap ingin omset maksimal dengan budget tetap"
+    },
+    {
+      icon: MessageCircle,
+      title: "Tim Customer Service",
+      description: "Yang nilai rata-rata pembeliannya masih rendah dan kesulitan menghadapi penolakan"
+    },
+    {
+      icon: Target,
+      title: "Bisnis Online",
+      description: "Yang lead calon pembelinya dilayani online terutama melalui WhatsApp"
+    },
+    {
+      icon: Users,
+      title: "Owner Bisnis",
+      description: "Yang ingin menambah CS/Admin Online tapi tidak tahu bagaimana melatihnya dengan efektif"
+    },
+    {
+      icon: HeartHandshake,
+      title: "Manajemen",
+      description: "Yang merasa tim CS kurang semangat, kurang skill, dan perlu upgrade performance"
+    }
+  ];
+
+  return (
+    <section className="py-20 bg-gradient-to-b from-secondary/30 to-background">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+            <span className="text-primary">Cocok Untuk</span> Siapa Kelas Ini?
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            Workshop ini dirancang khusus untuk berbagai profil bisnis yang ingin 
+            <span className="font-semibold text-primary"> meningkatkan performa CS online</span>
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+          {audiences.map((audience, index) => (
+            <Card key={index} className="p-6 h-full hover:shadow-medium transition-all duration-300 hover:-translate-y-1 group">
+              <div className="flex flex-col h-full">
+                <div className="bg-gradient-primary p-3 rounded-lg w-fit mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <audience.icon className="w-6 h-6 text-primary-foreground" />
+                </div>
+                <h3 className="text-lg font-semibold mb-3 text-primary">{audience.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed flex-grow">{audience.description}</p>
+              </div>
+            </Card>
+          ))}
+        </div>
+
+        {/* Key Problems Section */}
+        <Card className="bg-gradient-to-r from-warning/10 to-accent/10 p-8 border-2 border-warning/20">
+          <h3 className="text-2xl font-bold text-center mb-8">Masalah Yang Sering Dihadapi:</h3>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <h4 className="font-semibold text-lg mb-4 text-warning">❌ Sebelum Workshop:</h4>
+              <ul className="space-y-2">
+                <li className="flex items-start gap-3">
+                  <span className="text-destructive">•</span>
+                  <span>Closing rate masih rendah, belum sesuai harapan</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-destructive">•</span>
+                  <span>Banyak lead masuk tapi konversi rendah</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-destructive">•</span>
+                  <span>Tim CS bingung cara follow up yang efektif</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-destructive">•</span>
+                  <span>Omset jalan di tempat meski budget marketing naik</span>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-semibold text-lg mb-4 text-success">✅ Setelah Workshop:</h4>
+              <ul className="space-y-2">
+                <li className="flex items-start gap-3">
+                  <span className="text-success">•</span>
+                  <span>Closing rate meningkat signifikan</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-success">•</span>
+                  <span>Lead yang sama menghasilkan omset lebih besar</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-success">•</span>
+                  <span>Tim CS lebih percaya diri dan sistematis</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-success">•</span>
+                  <span>Budget marketing tetap, omset naik</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </Card>
+      </div>
+    </section>
+  );
+};
