@@ -2,6 +2,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Check, Clock, Users, Video, MapPin } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { X } from 'lucide-react';
 
 export const PricingSection = () => {
   const { ref: sectionRef, isVisible: sectionVisible } = useScrollAnimation();
@@ -157,7 +158,7 @@ export const PricingSection = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
             <div className="text-center">
               <div className="bg-destructive/10 border border-destructive/30 rounded-lg p-4 sm:p-6 mb-3 sm:mb-4">
-                <h4 className="font-semibold text-base sm:text-lg mb-3 sm:mb-4 text-destructive">❌ Tanpa Workshop</h4>
+                <h4 className="font-semibold text-base sm:text-lg mb-3 sm:mb-4 text-destructive">Tanpa Workshop</h4>
                 <ul className="text-xs sm:text-sm space-y-2 text-left">
                   <li>• Closing rate rendah terus-menerus</li>
                   <li>• Budget marketing naik, omset stagnan</li>
@@ -170,7 +171,7 @@ export const PricingSection = () => {
 
             <div className="text-center">
               <div className="bg-success/10 border border-success/30 rounded-lg p-4 sm:p-6 mb-3 sm:mb-4">
-                <h4 className="font-semibold text-base sm:text-lg mb-3 sm:mb-4 text-success">✅ Dengan Workshop</h4>
+                <h4 className="font-semibold text-base sm:text-lg mb-3 sm:mb-4 text-success">Dengan Workshop</h4>
                 <ul className="text-xs sm:text-sm space-y-2 text-left">
                   <li>• Closing rate meningkat signifikan</li>
                   <li>• Budget tetap, omset naik berlipat</li>
@@ -184,7 +185,7 @@ export const PricingSection = () => {
 
           <div className="text-center mt-6 sm:mt-8">
             <p className="text-lg sm:text-xl font-semibold text-primary mb-3 sm:mb-4">
-              🎯 Investasi sekali, manfaatnya selamanya!
+              Investasi sekali, manfaatnya selamanya!
             </p>
             <p className="text-muted-foreground text-sm sm:text-base">
               Bayangkan jika closing rate Anda naik hanya 10% saja, berapa tambahan omset yang akan Anda dapatkan?

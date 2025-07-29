@@ -16,7 +16,6 @@ export const TestimonialsSection = () => {
       company: "Konveksi Outer Wanita",
       content: "Mengikuti Workshop CS Ini Langsung Closing 5. Terima kasih mas Bayu atas materinya.",
       rating: 5,
-      highlight: "LANGSUNG CLOSING 5"
     },
     {
       name: "Bay",
@@ -77,12 +76,6 @@ export const TestimonialsSection = () => {
           {testimonials.map((testimonial, index) => (
             <Card key={index} className={`p-4 sm:p-6 hover:shadow-medium transition-all duration-300 hover:-translate-y-1 relative ${sectionVisible ? 'animate-scale-in' : 'opacity-0 scale-90'}`} style={{ animationDelay: `${index * 200}ms` }}>
               <Quote className="absolute top-3 right-3 sm:top-4 sm:right-4 w-6 h-6 sm:w-8 sm:h-8 text-primary/20" />
-              
-              {testimonial.highlight && (
-                <div className="bg-accent text-accent-foreground px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-bold mb-3 sm:mb-4 inline-block">
-                  {testimonial.highlight}
-                </div>
-              )}
 
               <div className="flex mb-3 sm:mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
