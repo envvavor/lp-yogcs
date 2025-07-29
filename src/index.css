@@ -17,10 +17,10 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    /* Workshop theme colors inspired by the original */
-    --primary: 215 100% 35%; /* Professional blue */
+    /* Workshop theme colors - Tosca Green */
+    --primary: 174 64% 40%; /* Tosca green */
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 215 100% 45%;
+    --primary-glow: 174 64% 50%;
 
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
@@ -42,7 +42,7 @@ All colors MUST be HSL.
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 215 100% 35%;
+    --ring: 174 64% 40%;
 
     --radius: 0.75rem;
 
@@ -84,9 +84,9 @@ All colors MUST be HSL.
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 215 100% 55%;
+    --primary: 174 64% 55%;
     --primary-foreground: 0 0% 0%;
-    --primary-glow: 215 100% 65%;
+    --primary-glow: 174 64% 65%;
 
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
@@ -108,7 +108,7 @@ All colors MUST be HSL.
 
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 215 100% 55%;
+    --ring: 174 64% 55%;
 
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
     --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(38 92% 70%));
