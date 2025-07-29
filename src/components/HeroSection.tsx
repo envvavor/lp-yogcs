@@ -21,10 +21,6 @@ export const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-screen">
           {/* Left Column - Main Content */}
           <div className="text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 bg-accent/20 text-accent-foreground px-4 py-2 rounded-full text-sm font-semibold mb-6">
-              <TrendingUp className="w-4 h-4" />
-              Angkatan #35 - Yogyakarta
-            </div>
 
             <h1 className="text-4xl lg:text-6xl font-bold text-primary-foreground mb-6 leading-tight">
               Workshop{" "}
@@ -84,79 +80,9 @@ export const HeroSection = () => {
 
           {/* Right Column - Event Details Card */}
           <div className="flex justify-center lg:justify-end">
-            <Card className="bg-white/95 backdrop-blur-sm p-8 max-w-md w-full shadow-large border-0">
-              <div className="text-center mb-6">
-                <div className="bg-gradient-accent text-accent-foreground px-4 py-2 rounded-full text-sm font-bold mb-4 inline-block">
-                  SPECIAL PROMO
-                </div>
-                <h3 className="text-2xl font-bold text-primary mb-2">Jadwal Workshop</h3>
-              </div>
-
-              <div className="space-y-4 mb-6">
-                <div className="flex items-center gap-3 p-3 bg-primary/5 rounded-lg">
-                  <Calendar className="w-5 h-5 text-primary" />
-                  <div>
-                    <p className="font-semibold">Kamis, 31 Juli 2025</p>
-                    <p className="text-sm text-muted-foreground">Angkatan #35</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-3 p-3 bg-primary/5 rounded-lg">
-                  <Clock className="w-5 h-5 text-primary" />
-                  <div>
-                    <p className="font-semibold">13.00 - 17.30 WIB</p>
-                    <p className="text-sm text-muted-foreground">4.5 Jam Intensif</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-3 p-3 bg-primary/5 rounded-lg">
-                  <MapPin className="w-5 h-5 text-primary" />
-                  <div>
-                    <p className="font-semibold">Yogyakarta</p>
-                    <p className="text-sm text-muted-foreground">Lokasi akan dikonfirmasi</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-3 p-3 bg-primary/5 rounded-lg">
-                  <Users className="w-5 h-5 text-primary" />
-                  <div>
-                    <p className="font-semibold">Terbatas 50 Peserta</p>
-                    <p className="text-sm text-muted-foreground">Kelas kecil untuk hasil maksimal</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="text-center border-t pt-6">
-                <p className="text-sm text-muted-foreground mb-2">Investasi Normal</p>
-                <p className="text-lg line-through text-muted-foreground">Rp 990.000</p>
-                <p className="text-3xl font-bold text-primary mb-4">Rp 500.000</p>
-                
-                <div className="bg-accent/10 p-3 rounded-lg mb-4">
-                  <p className="text-sm font-semibold text-accent-foreground">KHUSUS 10 PENDAFTAR TERCEPAT:</p>
-                  <p className="text-xs text-muted-foreground">🟠 2 tiket: @Rp 450rb</p>
-                  <p className="text-xs text-muted-foreground">🟠 3 tiket: @Rp 400rb</p>
-                </div>
-
-                <Button 
-                  variant="whatsapp" 
-                  size="lg" 
-                  className="w-full text-lg py-3 h-auto"
-                  asChild
-                >
-                  <a 
-                    href="https://wa.me/6281353025302?text=hai%20kak%20Asfi%20saya%20tertarik%20workshop%20Jagoan%20CS%20Yogyakarta%20bisa%20dibantu%3F"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    GABUNG SEKARANG
-                  </a>
-                </Button>
-
-                <p className="text-xs text-muted-foreground mt-3">
-                  Atau join online via Zoom - Rp 300.000
-                </p>
-              </div>
-            </Card>
+            <div className="hero-visual width-full max-w-md border-b-4 rounded-full">
+              <img src="/images/hero-image.png" alt="Hero Visual" className="border-b-4 rounded-full"/>
+            </div>
           </div>
         </div>
       </div>
