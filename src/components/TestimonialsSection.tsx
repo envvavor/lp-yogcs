@@ -114,18 +114,52 @@ export const TestimonialsSection = () => {
             </p>
             
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 items-center">
-              {/* Placeholder for brand logos */}
               <div className="bg-white/50 rounded-lg p-3 sm:p-4 h-16 sm:h-20 flex items-center justify-center">
-                <span className="text-xs sm:text-sm font-medium text-muted-foreground">Brand Logo</span>
+                <img 
+                  src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Pertamina_Logo.svg" 
+                  alt="Pertamina" 
+                  className="h-full w-full object-contain"
+                  onError={(e) => {
+                    e.currentTarget.src = '/placeholder-logo.png';
+                    e.currentTarget.alt = 'Pertamina placeholder';
+                  }}
+                />
               </div>
+
               <div className="bg-white/50 rounded-lg p-3 sm:p-4 h-16 sm:h-20 flex items-center justify-center">
-                <span className="text-xs sm:text-sm font-medium text-muted-foreground">Brand Logo</span>
+                <img 
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Indosat_Ooredoo.svg/2560px-Indosat_Ooredoo.svg.png" 
+                  alt="Indosat" 
+                  className="h-full w-full object-contain"
+                  onError={(e) => {
+                    e.currentTarget.src = '/placeholder-logo.png';
+                    e.currentTarget.alt = 'Indosat placeholder';
+                  }}
+                />
               </div>
+
               <div className="bg-white/50 rounded-lg p-3 sm:p-4 h-16 sm:h-20 flex items-center justify-center">
-                <span className="text-xs sm:text-sm font-medium text-muted-foreground">Brand Logo</span>
+                <img 
+                  src="https://pasmira.co.id/wp-content/uploads/2018/08/logo-pasdihati.png"
+                  alt="Pasmira" 
+                  className="h-full w-full object-contain"
+                  onError={(e) => {
+                    e.currentTarget.src = '/placeholder-logo.png';
+                    e.currentTarget.alt = 'Pasmira placeholder';
+                  }}
+                />
               </div>
+
               <div className="bg-white/50 rounded-lg p-3 sm:p-4 h-16 sm:h-20 flex items-center justify-center">
-                <span className="text-xs sm:text-sm font-medium text-muted-foreground">Brand Logo</span>
+                <img 
+                  src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/mlogo/ROI-60042.png" 
+                  alt="Rodalink" 
+                  className="h-full w-full object-contain"
+                  onError={(e) => {
+                    e.currentTarget.src = '/placeholder-logo.png';
+                    e.currentTarget.alt = 'Rodalink placeholder';
+                  }}
+                />
               </div>
             </div>
           </div>
