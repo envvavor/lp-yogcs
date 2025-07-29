@@ -5,7 +5,7 @@ import heroImage from "@/assets/hero-image.jpg";
 
 export const HeroSection = () => {
   return (
-    <section className="relative min-h-screen bg-gradient-hero overflow-hidden">
+    <section className="relative min-h-screen bg-gradient-hero overflow-hidden mt-11 sm:mt-0">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <img
