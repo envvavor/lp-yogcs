@@ -21,8 +21,8 @@ export const CTASection = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 max-w-6xl mx-auto">
-          {/* Left Side - Problem */}
-          <Card className="bg-white/10 backdrop-blur-sm border border-white/20 p-6 sm:p-8">
+
+          {/* <Card className="bg-white/10 backdrop-blur-sm border border-white/20 p-6 sm:p-8">
             <div className="flex items-start gap-3 sm:gap-4 mb-4 sm:mb-6">
               <AlertCircle className="w-6 h-6 sm:w-8 sm:h-8 text-accent mt-1 flex-shrink-0" />
               <div>
@@ -57,7 +57,6 @@ export const CTASection = () => {
             </div>
           </Card>
 
-          {/* Right Side - Solution */}
           <Card className="bg-white/10 backdrop-blur-sm border border-white/20 p-6 sm:p-8">
             <div className="flex items-start gap-3 sm:gap-4 mb-4 sm:mb-6">
               <TrendingUp className="w-6 h-6 sm:w-8 sm:h-8 text-accent mt-1 flex-shrink-0" />
@@ -91,7 +90,7 @@ export const CTASection = () => {
                 <span>ROI berlipat ganda untuk jangka panjang</span>
               </div>
             </div>
-          </Card>
+          </Card> */}
         </div>
 
         {/* Final Message */}

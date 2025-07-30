@@ -1,39 +1,65 @@
 import { Card } from "@/components/ui/card";
 import { Users, TrendingUp, MessageCircle, Target, Briefcase, HeartHandshake } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import {
+  FileText,
+  FileSpreadsheet,
+  Calculator,
+  Video,
+  PlayCircle,
+  RefreshCcw,
+  GraduationCap,
+  Users2,
+  CalendarClock,
+} from "lucide-react";
 
 export const TargetAudienceSection = () => {
   const { ref: sectionRef, isVisible: sectionVisible } = useScrollAnimation();
   const audiences = [
-    {
-      icon: Briefcase,
-      title: "Pembisnis",
-      description: "Yang ingin memperbaiki Closing Rate tim CS untuk meningkatkan konversi lead WA menjadi penjualan"
+      {
+      icon: FileText,
+      title: "Soft File Materi",
+      description: "Materi pelatihan dalam format PDF atau dokumen digital yang bisa dipelajari kapan saja."
     },
     {
-      icon: TrendingUp,
-      title: "Brand/Perusahaan",
-      description: "Yang tidak ingin menaikkan budget iklan, tapi tetap ingin omset maksimal dengan budget tetap"
+      icon: FileSpreadsheet,
+      title: "Template Laporan Harian",
+      description: "Template siap pakai untuk memudahkan monitoring performa harian tim CS."
     },
     {
-      icon: MessageCircle,
-      title: "Tim Customer Service",
-      description: "Yang nilai rata-rata pembeliannya masih rendah dan kesulitan menghadapi penolakan"
+      icon: Calculator,
+      title: "File Kalkulator Bisnis",
+      description: "Tools perhitungan sederhana untuk bantu analisa profit, ROAS, dan efisiensi iklan."
     },
     {
-      icon: Target,
-      title: "Bisnis Online",
-      description: "Yang lead calon pembelinya dilayani online terutama melalui WhatsApp"
+      icon: Video,
+      title: "Video Tutorial",
+      description: "Video penjelasan teknis untuk setiap langkah penting dalam iklan dan closing."
     },
     {
-      icon: Users,
-      title: "Owner Bisnis",
-      description: "Yang ingin menambah CS/Admin Online tapi tidak tahu bagaimana melatihnya dengan efektif"
+      icon: PlayCircle,
+      title: "Rekaman Kelas",
+      description: "Akses ulang rekaman setiap sesi belajar jika kamu ketinggalan atau ingin review materi."
     },
     {
-      icon: HeartHandshake,
-      title: "Manajemen",
-      description: "Yang merasa tim CS kurang semangat, kurang skill, dan perlu upgrade performance"
+      icon: RefreshCcw,
+      title: "Free Reseat",
+      description: "Kesempatan mengikuti kelas ulang tanpa biaya tambahan jika belum memahami materi."
+    },
+    {
+      icon: GraduationCap,
+      title: "Pengajar Berpengalaman",
+      description: "Mentor yang sudah terbukti sukses menjalankan strategi iklan dan closing."
+    },
+    {
+      icon: Users2,
+      title: "Group Support",
+      description: "Bergabung dalam komunitas belajar interaktif bersama peserta dan mentor."
+    },
+    {
+      icon: CalendarClock,
+      title: "Webinar Berkala",
+      description: "Update ilmu dan strategi terbaru lewat sesi webinar eksklusif setiap periode tertentu."
     }
   ];
 
@@ -42,11 +68,11 @@ export const TargetAudienceSection = () => {
       <div className="container mx-auto px-4">
         <div className={`text-center mb-12 sm:mb-16 transition-all duration-700 ${sectionVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'}`}>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
-            <span className="text-primary">Cocok Untuk</span> Siapa Kelas Ini?
+            <span className="text-primary">Fasilitas</span> Yang DIdapatkan?
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
-            Workshop ini dirancang khusus untuk berbagai profil bisnis yang ingin 
-            <span className="font-semibold text-primary"> meningkatkan performa CS online</span>
+            Kelas advertiser for beginner 
+            <span className="font-semibold text-primary"> menyediakan berikut untuk para siswa nya</span>
           </p>
         </div>
 
@@ -64,7 +90,7 @@ export const TargetAudienceSection = () => {
           ))}
         </div>
 
-        {/* Key Problems Section */}
+        {/* Key Problems Section
         <Card className="bg-gradient-to-r from-warning/10 to-accent/10 p-6 sm:p-8 border-2 border-warning/20">
           <h3 className="text-xl sm:text-2xl font-bold text-center mb-6 sm:mb-8">Masalah Yang Sering Dihadapi:</h3>
           
@@ -113,7 +139,7 @@ export const TargetAudienceSection = () => {
               </ul>
             </div>
           </div>
-        </Card>
+        </Card> */}
       </div>
     </section>
   );

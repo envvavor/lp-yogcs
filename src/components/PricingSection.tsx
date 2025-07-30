@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Check, Clock, Users, Video, MapPin } from "lucide-react";
+import { Check, Clock, Users, Video, MapPin, Camera, VideoIcon, BoxIcon } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { X } from 'lucide-react';
 
@@ -18,36 +18,38 @@ export const PricingSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 max-w-6xl mx-auto">
           {/* Offline Workshop */}
-          <Card className={`p-6 sm:p-8 relative overflow-hidden border-2 border-primary/20 hover:shadow-large transition-all duration-300 ${sectionVisible ? 'animate-fade-in-left' : 'opacity-0 -translate-x-8'}`}>
-            <div className="absolute top-0 right-0 bg-gradient-accent text-accent-foreground px-3 sm:px-4 py-1 sm:py-2 rounded-bl-lg font-bold text-xs sm:text-sm">
-              REKOMENDASI
+          <Card className={`flex flex-col h-full p-6 sm:p-8 relative overflow-hidden border-2 border-primary/20 hover:shadow-large transition-all duration-300 ${sectionVisible ? 'animate-fade-in-left' : 'opacity-0 -translate-x-8'}`}>
+            <div className="absolute top-0 right-0 bg-red-600 text-white px-3 sm:px-4 py-1 sm:py-2 rounded-bl-lg font-bold text-xs sm:text-sm">
+              PROMO
             </div>
             
             <div className="text-center mb-4 sm:mb-6">
               <div className="bg-gradient-primary p-3 sm:p-4 rounded-full w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4 flex items-center justify-center">
-                <MapPin className="w-6 h-6 sm:w-8 sm:h-8 text-primary-foreground" />
+                <VideoIcon className="w-6 h-6 sm:w-8 sm:h-8 text-primary-foreground" />
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold mb-2">Workshop Offline</h3>
-              <p className="text-muted-foreground text-sm sm:text-base">Yogyakarta - Kamis, 31 Juli 2025</p>
+              <h3 className="text-xl sm:text-2xl font-bold mb-2">Workshop Online</h3>
+              <p className="text-muted-foreground text-sm sm:text-base">Yogyakarta - 18-23 Agustus 2025</p>
+              <p className="text-muted-foreground text-sm sm:text-base">Pukul 09.00-12.00 WIB</p>
             </div>
 
             <div className="text-center mb-4 sm:mb-6">
               <div className="text-xs sm:text-sm text-muted-foreground mb-1 sm:mb-2">Harga Normal</div>
-              <div className="text-lg sm:text-2xl line-through text-muted-foreground mb-1 sm:mb-2">Rp 990.000</div>
-              <div className="text-3xl sm:text-4xl font-bold text-primary mb-3 sm:mb-4">Rp 500.000</div>
+              <div className="text-lg sm:text-2xl line-through text-muted-foreground mb-1 sm:mb-2">Rp 1.500.000</div>
+              <div className="text-3xl sm:text-4xl font-bold text-primary mb-3 sm:mb-4">Rp 990.000</div>
               
               <div className="bg-warning/10 border border-warning/30 rounded-lg p-3 sm:p-4 mb-4 sm:mb-6">
-                <p className="font-semibold text-warning text-xs sm:text-sm mb-1 sm:mb-2">KHUSUS 10 PENDAFTAR TERCEPAT:</p>
+                <p className="font-semibold text-warning text-xs sm:text-sm mb-1 sm:mb-2">Promo Early Bird (launching) :</p>
                 <div className="space-y-1 text-xs sm:text-sm">
-                  <p>🟠 <strong>2 tiket:</strong> @Rp 450.000</p>
-                  <p>🟠 <strong>3 tiket:</strong> @Rp 400.000</p>
+                  <p>🟠 <strong>2 tiket:</strong> @Rp 1.490.000</p>
+                  <p>🟠 <strong>3 tiket:</strong> @Rp 1.999.000</p>
                 </div>
+                <p className="font-semibold text-white bg-red-500 text-xs sm:text-sm mb-1 sm:mb-2 mt-4 p-2 rounded-sm">Hanya 20 Peserta</p>
               </div>
             </div>
 
-            <div className="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
+            {/* <div className="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
               <div className="flex items-start gap-2 sm:gap-3">
                 <Check className="w-4 h-4 sm:w-5 sm:h-5 text-success mt-0.5 flex-shrink-0" />
                 <span className="text-xs sm:text-sm">Workshop intensif 4.5 jam (13.00-17.30 WIB)</span>
@@ -72,12 +74,12 @@ export const PricingSection = () => {
                 <Check className="w-4 h-4 sm:w-5 sm:h-5 text-success mt-0.5 flex-shrink-0" />
                 <span className="text-xs sm:text-sm">Terbatas 50 peserta (kelas kecil)</span>
               </div>
-            </div>
+            </div> */}
 
-            <Button 
-              variant="cta" 
-              size="lg" 
-              className="w-full text-base sm:text-lg py-2 sm:py-3 h-auto"
+           <Button
+              variant="cta"
+              size="lg"
+              className="mt-auto w-full text-base sm:text-lg py-2 sm:py-3 h-auto bg-primary hover:bg-primary/90 text-white font-semibold transition-colors duration-300"
               asChild
             >
               <a 
@@ -85,73 +87,79 @@ export const PricingSection = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                DAFTAR OFFLINE
+                DAFTAR
               </a>
             </Button>
           </Card>
 
-          {/* Online Workshop */}
-          <Card className={`p-6 sm:p-8 relative overflow-hidden hover:shadow-medium transition-all duration-300 ${sectionVisible ? 'animate-fade-in-right' : 'opacity-0 translate-x-8'}`} style={{ animationDelay: '200ms' }}>
+          {/* online Workshop */}
+          <Card className={`p-6 sm:p-8 relative overflow-hidden border-2 border-primary/20 hover:shadow-large transition-all duration-300 ${sectionVisible ? 'animate-fade-in-right' : 'opacity-0 -translate-x-8'}`}>
+            <div className="absolute top-0 right-0 bg-red-600 text-white px-3 sm:px-4 py-1 sm:py-2 rounded-bl-lg font-bold text-xs sm:text-sm">
+              BONUS SPESIAL
+            </div>
+            
             <div className="text-center mb-4 sm:mb-6">
               <div className="bg-gradient-primary p-3 sm:p-4 rounded-full w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4 flex items-center justify-center">
-                <Video className="w-6 h-6 sm:w-8 sm:h-8 text-primary-foreground" />
+                <BoxIcon className="w-6 h-6 sm:w-8 sm:h-8 text-primary-foreground" />
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold mb-2">Workshop Online</h3>
-              <p className="text-muted-foreground text-sm sm:text-base">Via Zoom - Kamis, 31 Juli 2025</p>
+              <h3 className="text-xl sm:text-2xl font-bold mb-2">KELAS ONLINE JAGOAN CS ONLINE</h3>
+              <p className="text-muted-foreground text-sm sm:text-base">Yogyakarta - 18-23 Agustus 2025</p>
+              <p className="text-muted-foreground text-sm sm:text-base">Pukul 09.00-12.00 WIB</p>
             </div>
 
             <div className="text-center mb-4 sm:mb-6">
-              <div className="text-3xl sm:text-4xl font-bold text-primary mb-3 sm:mb-4">Rp 300.000</div>
-              <div className="bg-primary/10 border border-primary/30 rounded-lg p-2 sm:p-3">
-                <p className="text-xs sm:text-sm text-primary font-medium">Tidak bisa ke venue? Join online!</p>
-              </div>
+              <div className="text-3xl sm:text-4xl font-bold text-primary mb-3 sm:mb-4">Rp 500.000</div>
             </div>
 
-            <div className="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
-              <div className="flex items-start gap-2 sm:gap-3">
-                <Check className="w-4 h-4 sm:w-5 sm:h-5 text-success mt-0.5 flex-shrink-0" />
-                <span className="text-xs sm:text-sm">Workshop intensif 4.5 jam via Zoom</span>
-              </div>
-              <div className="flex items-start gap-2 sm:gap-3">
-                <Check className="w-4 h-4 sm:w-5 sm:h-5 text-success mt-0.5 flex-shrink-0" />
-                <span className="text-xs sm:text-sm">Ikut dari mana saja (fleksibel)</span>
-              </div>
-              <div className="flex items-start gap-2 sm:gap-3">
-                <Check className="w-4 h-4 sm:w-5 sm:h-5 text-success mt-0.5 flex-shrink-0" />
-                <span className="text-xs sm:text-sm">Materi workshop yang sama</span>
-              </div>
-              <div className="flex items-start gap-2 sm:gap-3">
-                <Check className="w-4 h-4 sm:w-5 sm:h-5 text-success mt-0.5 flex-shrink-0" />
-                <span className="text-xs sm:text-sm">Sesi tanya jawab interaktif</span>
-              </div>
-              <div className="flex items-start gap-2 sm:gap-3">
-                <Check className="w-4 h-4 sm:w-5 sm:h-5 text-success mt-0.5 flex-shrink-0" />
-                <span className="text-xs sm:text-sm">Rekaman workshop untuk review</span>
-              </div>
-              <div className="flex items-start gap-2 sm:gap-3">
-                <Check className="w-4 h-4 sm:w-5 sm:h-5 text-success mt-0.5 flex-shrink-0" />
-                <span className="text-xs sm:text-sm">Lebih hemat waktu & biaya transportasi</span>
-              </div>
+            <div className="text-center mb-4 sm:mb-6 max-w-s mx-auto">
+              <img src="/images/csonline.webp" alt="" className="rounded-lg" />
             </div>
+
+            {/* <div className="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
+              <div className="flex items-start gap-2 sm:gap-3">
+                <Check className="w-4 h-4 sm:w-5 sm:h-5 text-success mt-0.5 flex-shrink-0" />
+                <span className="text-xs sm:text-sm">Workshop intensif 4.5 jam (13.00-17.30 WIB)</span>
+              </div>
+              <div className="flex items-start gap-2 sm:gap-3">
+                <Check className="w-4 h-4 sm:w-5 sm:h-5 text-success mt-0.5 flex-shrink-0" />
+                <span className="text-xs sm:text-sm">Bertemu langsung dengan trainer berpengalaman</span>
+              </div>
+              <div className="flex items-start gap-2 sm:gap-3">
+                <Check className="w-4 h-4 sm:w-5 sm:h-5 text-success mt-0.5 flex-shrink-0" />
+                <span className="text-xs sm:text-sm">Interaksi langsung & networking</span>
+              </div>
+              <div className="flex items-start gap-2 sm:gap-3">
+                <Check className="w-4 h-4 sm:w-5 sm:h-5 text-success mt-0.5 flex-shrink-0" />
+                <span className="text-xs sm:text-sm">Mendapat "Kitab CS" eksklusif</span>
+              </div>
+              <div className="flex items-start gap-2 sm:gap-3">
+                <Check className="w-4 h-4 sm:w-5 sm:h-5 text-success mt-0.5 flex-shrink-0" />
+                <span className="text-xs sm:text-sm">Study case mendalam & personal</span>
+              </div>
+              <div className="flex items-start gap-2 sm:gap-3">
+                <Check className="w-4 h-4 sm:w-5 sm:h-5 text-success mt-0.5 flex-shrink-0" />
+                <span className="text-xs sm:text-sm">Terbatas 50 peserta (kelas kecil)</span>
+              </div>
+            </div> */}
 
             <Button 
-              variant="outline" 
+              variant="cta" 
               size="lg" 
-              className="w-full text-base sm:text-lg py-2 sm:py-3 h-auto border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+              className="w-full text-base sm:text-lg py-2 sm:py-3 h-auto bg-primary hover:bg-primary/90 text-white font-semibold transition-colors duration-300"
               asChild
             >
               <a 
-                href="https://wa.me/6281353025302?text=hai%20kak%20Asfi%20saya%20tertarik%20workshop%20Online%20Zoom%20Jagoan%20CS%20bisa%20dibantu%3F"
+                href="https://creativynet.myscalev.com/yogcs"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                DAFTAR ONLINE
+                Baca Selengkapnya
               </a>
             </Button>
           </Card>
         </div>
 
-        {/* Value Comparison */}
+        {/* Value Comparison
         <Card className="mt-12 sm:mt-16 p-6 sm:p-8 bg-gradient-to-r from-primary/10 to-accent/10 border-2 border-primary/20">
           <h3 className="text-xl sm:text-2xl font-bold text-center mb-6 sm:mb-8">Bandingkan Nilai Investasi</h3>
           
@@ -191,7 +199,7 @@ export const PricingSection = () => {
               Bayangkan jika closing rate Anda naik hanya 10% saja, berapa tambahan omset yang akan Anda dapatkan?
             </p>
           </div>
-        </Card>
+        </Card> */}
       </div>
     </section>
   );

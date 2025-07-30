@@ -25,20 +25,20 @@ export const TestimonialsSection = () => {
     }
   ];
 
-  const results = [
-    {
-      metric: "80%",
-      label: "CLOSING RATE",
-      description: "Pencapaian maksimal peserta workshop",
-      color: "success"
-    },
-    {
-      metric: "22%",
-      label: "CLOSING RATE",
-      description: "Rata-rata peningkatan peserta",
-      color: "primary"
-    }
-  ];
+  // const results = [
+  //   {
+  //     metric: "80%",
+  //     label: "CLOSING RATE",
+  //     description: "Pencapaian maksimal peserta workshop",
+  //     color: "success"
+  //   },
+  //   {
+  //     metric: "22%",
+  //     label: "CLOSING RATE",
+  //     description: "Rata-rata peningkatan peserta",
+  //     color: "primary"
+  //   }
+  // ];
 
   return (
     <section ref={sectionRef} className="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-background to-primary/5">
@@ -52,7 +52,7 @@ export const TestimonialsSection = () => {
           </p>
         </div>
 
-        {/* Results Statistics */}
+        {/* Results Statistics
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16">
           {results.map((result, index) => (
             <Card key={index} className={`p-6 sm:p-8 text-center bg-gradient-to-br ${
@@ -69,7 +69,7 @@ export const TestimonialsSection = () => {
               <p className="text-muted-foreground text-sm sm:text-base">{result.description}</p>
             </Card>
           ))}
-        </div>
+        </div> */}
 
         {/* Testimonials */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">

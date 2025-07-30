@@ -7,7 +7,7 @@ export const Footer = () => {
     <footer className="bg-primary text-primary-foreground py-8 md:py-12 lg:py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* In-House Training Section */}
-        <Card className="bg-white/10 backdrop-blur-sm border border-white/20 p-4 sm:p-6 lg:p-8 mb-6 sm:mb-8 lg:mb-12">
+        {/* <Card className="bg-white/10 backdrop-blur-sm border border-white/20 p-4 sm:p-6 lg:p-8 mb-6 sm:mb-8 lg:mb-12">
           <div className="text-center mb-4 sm:mb-6 lg:mb-8">
             <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-primary-foreground mb-2 sm:mb-3 lg:mb-4">
               Butuh Solusi <span className="text-accent">Khusus</span> Untuk Perusahaan?
@@ -68,7 +68,7 @@ export const Footer = () => {
               </a>
             </Button>
           </div>
-        </Card>
+        </Card> */}
 
         {/* Contact Information */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mb-6 sm:mb-8 lg:mb-12">

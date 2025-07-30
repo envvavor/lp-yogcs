@@ -23,32 +23,28 @@ export const HeroSection = () => {
           <div className="text-center lg:text-left order-2 lg:order-1">
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-4 sm:mb-6 leading-tight">
-              Workshop{" "}
-              <span className="text-accent">JAGOAN CS ONLINE</span>
+              Belajar{" "}
+              <span className="text-accent">Ngiklan dari Nol, Biar Bisnismu Makin Nanjak!</span>
             </h1>
 
             <p className="text-lg sm:text-xl lg:text-2xl text-primary-foreground/90 mb-6 sm:mb-8 font-medium">
-              Tingkatkan <span className="text-accent font-bold">Closing Rate CS + AOV</span> hingga 2x lipat!
+              Sekolah Advertiser <span className="text-accent font-bold">for Beginners — kelas online</span> intensif khusus buat kamu yang pengen bisa ngiklan sendiri & dapet hasil nyata.
             </p>
 
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 sm:p-6 mb-6 sm:mb-8 border border-white/20">
-              <h3 className="text-base sm:text-lg font-semibold text-primary-foreground mb-3 sm:mb-4">Target Workshop:</h3>
+              <h3 className="text-base sm:text-lg font-semibold text-primary-foreground mb-3 sm:mb-4">Di level begginer ini kita akan mempelajari:</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 text-primary-foreground/90 text-sm sm:text-base">
                 <div className="flex items-center gap-2 sm:gap-3">
                   <div className="w-2 h-2 sm:w-3 sm:h-3 bg-accent rounded-full flex-shrink-0"></div>
-                  <span>Closing Rate CS Meningkat</span>
+                  <span>Iklan Click-to-WhatsApp</span>
                 </div>
                 <div className="flex items-center gap-2 sm:gap-3">
                   <div className="w-2 h-2 sm:w-3 sm:h-3 bg-accent rounded-full flex-shrink-0"></div>
-                  <span>Average Order Value Naik</span>
+                  <span>Instagram Ads</span>
                 </div>
                 <div className="flex items-center gap-2 sm:gap-3">
                   <div className="w-2 h-2 sm:w-3 sm:h-3 bg-accent rounded-full flex-shrink-0"></div>
-                  <span>Omzet Bisnis Otomatis Meningkat</span>
-                </div>
-                <div className="flex items-center gap-2 sm:gap-3">
-                  <div className="w-2 h-2 sm:w-3 sm:h-3 bg-accent rounded-full flex-shrink-0"></div>
-                  <span>Tim CS Lebih Efektif</span>
+                  <span>Strategi Landing Page to WhatsApp</span>
                 </div>
               </div>
             </div>

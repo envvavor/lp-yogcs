@@ -24,15 +24,15 @@ export const Galery = () => {
     },
     {
       id: 4,
-      title: "Hackathon",
-      description: "Kompetisi pengembangan solusi kreatif",
-      category: "event"
+       title: "Workshop Pelatihan",
+      description: "Sesi pelatihan interaktif dengan peserta",
+      category: "workshop"
     },
     {
       id: 5,
-      title: "Award Night",
-      description: "Penghargaan untuk peserta terbaik",
-      category: "event"
+       title: "Workshop Pelatihan",
+      description: "Sesi pelatihan interaktif dengan peserta",
+      category: "workshop"
     },
     {
       id: 6,
@@ -62,7 +62,7 @@ export const Galery = () => {
               <div className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
                 <div className="aspect-w-4 aspect-h-3">
                   <img
-                    src={`/images/img${item.id}.jpg`}
+                    src={`/images/img${item.id}.webp`}
                     alt={item.title}
                     className="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-105"
                     loading="lazy"
