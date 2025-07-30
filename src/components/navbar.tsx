@@ -57,7 +57,7 @@ export const Navbar = () => {
             Benefits
           </button>
           <button onClick={() => scrollToSection("audience-section")} className={navLinkClass({ isActive: false })}>
-            For Who
+            Facility
           </button>
           <button onClick={() => scrollToSection("pricing-section")} className={navLinkClass({ isActive: false })}>
             Pricing
@@ -96,7 +96,7 @@ export const Navbar = () => {
               Benefits
             </button>
             <button onClick={() => scrollToSection("audience-section")} className={navLinkClass({ isActive: false })}>
-              For Who
+              Facility
             </button>
             <button onClick={() => scrollToSection("pricing-section")} className={navLinkClass({ isActive: false })}>
               Pricing
