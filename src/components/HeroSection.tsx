@@ -53,7 +53,7 @@ export const HeroSection = () => {
               <Button 
                 variant="cta" 
                 size="lg"
-                className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 h-auto"
+                className="text-primary-foreground sm:text-lg px-6 sm:px-8 py-3 sm:py-4 h-auto"
                 asChild
               >
                 <a 
@@ -64,13 +64,13 @@ export const HeroSection = () => {
                   DAFTAR SEKARANG
                 </a>
               </Button>
-              <Button 
+              {/* <Button 
                 variant="outline" 
                 size="lg"
                 className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 h-auto bg-white/10 border-white/30 text-primary-foreground hover:bg-white/20"
               >
                 Lihat Detail
-              </Button>
+              </Button> */}
             </div>
           </div>
 

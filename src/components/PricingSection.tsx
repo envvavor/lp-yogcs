@@ -49,32 +49,44 @@ export const PricingSection = () => {
               </div>
             </div>
 
-            {/* <div className="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
+            <div className="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
               <div className="flex items-start gap-2 sm:gap-3">
                 <Check className="w-4 h-4 sm:w-5 sm:h-5 text-success mt-0.5 flex-shrink-0" />
-                <span className="text-xs sm:text-sm">Workshop intensif 4.5 jam (13.00-17.30 WIB)</span>
+                <span className="text-xs sm:text-sm">Workshop intensif 6 Hari</span>
               </div>
               <div className="flex items-start gap-2 sm:gap-3">
                 <Check className="w-4 h-4 sm:w-5 sm:h-5 text-success mt-0.5 flex-shrink-0" />
-                <span className="text-xs sm:text-sm">Bertemu langsung dengan trainer berpengalaman</span>
+                <span className="text-xs sm:text-sm">Durasi Meeting 3 Jam/Meeting</span>
               </div>
               <div className="flex items-start gap-2 sm:gap-3">
                 <Check className="w-4 h-4 sm:w-5 sm:h-5 text-success mt-0.5 flex-shrink-0" />
-                <span className="text-xs sm:text-sm">Interaksi langsung & networking</span>
+                <span className="text-xs sm:text-sm">Interaksi & networking</span>
               </div>
               <div className="flex items-start gap-2 sm:gap-3">
                 <Check className="w-4 h-4 sm:w-5 sm:h-5 text-success mt-0.5 flex-shrink-0" />
-                <span className="text-xs sm:text-sm">Mendapat "Kitab CS" eksklusif</span>
+                <span className="text-xs sm:text-sm">Soft File</span>
               </div>
               <div className="flex items-start gap-2 sm:gap-3">
                 <Check className="w-4 h-4 sm:w-5 sm:h-5 text-success mt-0.5 flex-shrink-0" />
-                <span className="text-xs sm:text-sm">Study case mendalam & personal</span>
+                <span className="text-xs sm:text-sm">Trainer Yang Berpengalaman</span>
               </div>
               <div className="flex items-start gap-2 sm:gap-3">
                 <Check className="w-4 h-4 sm:w-5 sm:h-5 text-success mt-0.5 flex-shrink-0" />
-                <span className="text-xs sm:text-sm">Terbatas 50 peserta (kelas kecil)</span>
+                <span className="text-xs sm:text-sm">Terbatas 20 peserta</span>
               </div>
-            </div> */}
+            </div>
+
+             <div className="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
+              <h1 className="text-red-500">Tidak Termasuk :</h1>
+              <div className="flex items-start gap-2 sm:gap-3">
+                <X className="w-4 h-4 sm:w-5 sm:h-5 text-red-500 mt-0.5 flex-shrink-0" />
+                <span className="text-xs sm:text-sm">Biaya Domain</span>
+              </div>
+              <div className="flex items-start gap-2 sm:gap-3">
+                <X className="w-4 h-4 sm:w-5 sm:h-5 text-red-500 mt-0.5 flex-shrink-0" />
+                <span className="text-xs sm:text-sm">Budget Iklan</span>
+              </div>
+            </div>
 
            <Button
               variant="cta"
@@ -108,6 +120,7 @@ export const PricingSection = () => {
             </div>
 
             <div className="text-center mb-4 sm:mb-6">
+              <div className="text-xs sm:text-sm text-muted-foreground mb-1 sm:mb-2">Harga Normal</div>
               <div className="text-3xl sm:text-4xl font-bold text-primary mb-3 sm:mb-4">Rp 500.000</div>
             </div>
 
