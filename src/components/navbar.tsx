@@ -68,6 +68,12 @@ export const Navbar = () => {
           >
             Pricing
           </button>
+          <button
+            onClick={() => scrollToSection("gallery-section")}
+            className={navLinkClass({ isActive: false })}
+          >
+            Gallery
+          </button>
           <button 
             onClick={() => scrollToSection("cta-section")}
             className="bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-orange-600 transition-colors"
@@ -115,6 +121,12 @@ export const Navbar = () => {
               className={navLinkClass({ isActive: false })}
             >
               Pricing
+            </button>
+            <button 
+              onClick={() => scrollToSection("gallery-section")}
+              className={navLinkClass({ isActive: false })}
+            >
+              Gallery
             </button>
             <button 
               onClick={() => scrollToSection("cta-section")}

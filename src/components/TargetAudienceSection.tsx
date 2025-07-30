@@ -70,7 +70,7 @@ export const TargetAudienceSection = () => {
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
             <div>
-              <h4 className="font-semibold text-base sm:text-lg mb-3 sm:mb-4 text-warning">❌ Sebelum Workshop:</h4>
+              <h4 className="font-semibold text-base sm:text-lg mb-3 sm:mb-4 text-warning">Sebelum Workshop:</h4>
               <ul className="space-y-2 text-sm sm:text-base">
                 <li className="flex items-start gap-2 sm:gap-3">
                   <span className="text-destructive flex-shrink-0">•</span>
@@ -92,7 +92,7 @@ export const TargetAudienceSection = () => {
             </div>
 
             <div>
-              <h4 className="font-semibold text-base sm:text-lg mb-3 sm:mb-4 text-success">✅ Setelah Workshop:</h4>
+              <h4 className="font-semibold text-base sm:text-lg mb-3 sm:mb-4 text-success">Setelah Workshop:</h4>
               <ul className="space-y-2 text-sm sm:text-base">
                 <li className="flex items-start gap-2 sm:gap-3">
                   <span className="text-success flex-shrink-0">•</span>

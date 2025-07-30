@@ -6,6 +6,7 @@ import { PricingSection } from "@/components/PricingSection";
 import { CTASection } from "@/components/CTASection";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/navbar";
+import { Galery } from "@/components/Galery";
 
 const Index = () => {
   return (
@@ -35,6 +36,11 @@ const Index = () => {
       {/* Pricing Section */}
       <section id="pricing-section" className="scroll-mt-20">
         <PricingSection />
+      </section>
+
+      {/* Gallery Section */}
+      <section id="gallery-section" className="scroll-mt-20">
+        <Galery />
       </section>
       
       {/* CTA Section */}
