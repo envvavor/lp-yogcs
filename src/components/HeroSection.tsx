@@ -20,15 +20,17 @@ export const HeroSection = () => {
           src="/images/hero-bg.jpg"
           alt="Background"
           className="w-full h-full object-cover sm:hidden"
+          loading="lazy"
         />
         {/* Desktop-optimized background */}
         <img
           src="/images/hero-bg.jpg"
           alt="Background"
           className="hidden sm:block w-full h-full object-cover"
+          loading="lazy"
         />
         {/* Dark overlay */}
-        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 bg-black/30"></div>
       </div>
 
       {/* Content */}
